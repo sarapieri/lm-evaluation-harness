@@ -1,16 +1,13 @@
-task: medqa_4options
-dataset_path: GBaker/MedQA-USMLE-4-options-hf
+task: medqa
+dataset_path: HuggingSara/medqa
 output_type: multiple_choice
 training_split: train
 validation_split: validation
 test_split: test
-doc_to_text: !function preprocess_medqa.doc_to_text
-doc_to_target: !function preprocess_medqa.doc_to_target
-doc_to_choice: [ 'A', 'B', 'C', 'D' ]
+doc_to_text: !function utils.doc_to_text
+doc_to_target: answer_idx
+doc_to_choice: ["A", "B", "C", "D", "E"]
 metric_list:
   - metric: acc
-    aggregation: mean
-    higher_is_better: true
-  - metric: acc_norm
     aggregation: mean
     higher_is_better: true

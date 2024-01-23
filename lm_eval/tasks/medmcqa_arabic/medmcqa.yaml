@@ -1,0 +1,18 @@
+task: medmcqa_arabic
+dataset_path: HuggingSara/medmcqa-validation_arabic
+output_type: multiple_choice
+training_split: null
+validation_split: null
+test_split: train
+doc_to_text: !function utils.doc_to_text
+doc_to_target: cop
+doc_to_choice: ["أ", "ب", "ج", "د"]
+should_decontaminate: true
+doc_to_decontamination_query: "{{question}}"
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true

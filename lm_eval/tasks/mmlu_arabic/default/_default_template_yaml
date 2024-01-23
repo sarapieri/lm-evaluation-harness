@@ -1,0 +1,15 @@
+group: mmlu_arabic
+test_split: train
+fewshot_split: train
+fewshot_config:
+  sampler: first_n
+output_type: multiple_choice
+doc_to_text: "{{question.strip()}}\nأ. {{choices[0]}}\nب. {{choices[1]}}\nج. {{choices[2]}}\nد. {{choices[3]}}\nالإجابة:"
+doc_to_choice: ["أ", "ب", "ج", "د"]
+doc_to_target: answer
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 0.0
