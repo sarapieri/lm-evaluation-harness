@@ -16,7 +16,7 @@ export HF_HOME="/home/fahad.khan/sara.pieri/hf"
 MODEL_NAME="mistralai/Mixtral-8x7B-v0.1"
 FOLDER_NAME="Mixtral-8x7B-v0.1"
 # export CUDA_VISIBLE_DEVICES=0,1,2,3
-export ZENO_API_KEY="zen_b7yjUcraOBm12BEnFgtLq4zCANjf5ERRZtMxPKrufE0"
+# export ZENO_API_KEY="zen_b7yjUcraOBm12BEnFgtLq4zCANjf5ERRZtMxPKrufE0"
 
 lm_eval  --model hf \
     --model_args pretrained=${MODEL_NAME},parallelize=True,trust_remote_code=True \
