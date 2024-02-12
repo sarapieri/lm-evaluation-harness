@@ -1,4 +1,4 @@
 "dataset_path" : "HuggingSara/mmlu-anatomy-test_arabic2"
-"description": "The following are multiple choice questions (with answers) about anatomy.\n\n"
+"description": "فيما يلي أسئلة الاختيار من متعدد (مع الإجابات) حول علم التشريح.\n\n"
 "include": "_default_template_yaml"
 "task": "mmlu_anatomy_arabic"

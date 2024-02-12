@@ -1,4 +1,4 @@
 "dataset_path" : "HuggingSara/mmlu-college_biology-test_arabic2"
-"description": "The following are multiple choice questions (with answers) about college biology.\n\n"
+"description": "فيما يلي أسئلة الاختيار من متعدد (مع الإجابات) حول علم الأحياء في الكلية.\n\n"
 "include": "_default_template_yaml"
 "task": "mmlu_college_biology_arabic"
