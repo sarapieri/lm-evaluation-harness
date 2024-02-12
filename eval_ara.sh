@@ -14,7 +14,7 @@ export HF_HOME="/home/fahad.khan/sara.pieri/hf"
 # Define the model name
 # '/home/fahad.khan/sara.pieri/output/output_vicuna13b_arabic_deepspeed'
 MODEL_NAME="mistralai/Mixtral-8x7B-v0.1"
-FOLDER_NAME="mistralai/Mixtral-8x7B-v0.1"
+FOLDER_NAME="Mixtral-8x7B-v0.1"
 # export CUDA_VISIBLE_DEVICES=0,1,2,3
 export ZENO_API_KEY="zen_b7yjUcraOBm12BEnFgtLq4zCANjf5ERRZtMxPKrufE0"
 
@@ -23,7 +23,8 @@ lm_eval  --model hf \
     --tasks mmlu_arabic,medqa_arabic,medmcqa_arabic,pubmedqa_arabic,usmle_self_assessment_arabic \
     --batch_size 8 \
     --log_samples \
-    --output_path "output_ara/${FOLDER_NAME}"
+    --output_path "output_ara/${FOLDER_NAME}" \
+    --num_fewshot 5
 
 # python ~/sara.pieri/eval/lm-evaluation-harness/scripts/zeno_visualize.py  --data_path output_ara --project_name "Eval2 Ara"
 
